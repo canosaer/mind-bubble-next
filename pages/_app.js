@@ -1,7 +1,11 @@
-import '../styles/globals.css'
+// Global Styles
+import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+// Font Awesome Initialization
+
+
+function MindBubble({ Component, pageProps }) {
+  return <Component className="app" {...pageProps} />
 }
 
-export default MyApp
+export default MindBubble

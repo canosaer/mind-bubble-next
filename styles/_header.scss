@@ -1,0 +1,143 @@
+@use 'mixins';
+@use 'variables';
+@use 'toggle-menu';
+
+.header{
+	@include mixins.default-grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	position: relative;
+	padding: 1.5rem;
+
+	@include mixins.wide-screen{
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		padding: 1.5rem 4%;
+	}
+
+}
+
+.logo{
+	grid-column: 2/3;
+	place-self: center center;
+	background: url("../img/logo.png");
+	@include mixins.default-background;
+	height: 5rem;
+	width: 7.35rem;
+	cursor: pointer;
+	position: relative;
+
+	@include mixins.wide-screen{
+		grid-column: 1/2;
+		grid-row: 1/2;
+		place-self: center left;
+	}
+
+	&__link{
+		@include mixins.cover-parent;
+	}
+}
+
+.menu{
+	@include mixins.default-grid;
+	grid-column: 2/4;
+	width: 100%;
+
+	&__list{
+		@include mixins.wide-screen{
+			place-self: center center;
+			display: flex;
+			margin-top: unset;
+			font-size: unset;
+			align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            width: 100%;
+            max-width: 55.25rem;
+		}
+	}
+
+	&__link{
+		color: black;
+        transition: color 250ms ease-in-out;
+		font-weight: bold;
+		text-transform: uppercase;
+		place-self: center right;
+		
+
+		&:hover{
+			color: #ed8936;
+		}
+
+		@include mixins.wide-screen{
+			font-size: 1.05rem;
+			font-weight: unset;
+			text-transform: unset;
+		}
+	}
+
+	&__item{
+		@include mixins.wide-screen{
+			padding: 1rem 0rem;
+			display: unset;
+			justify-content: unset;
+			padding-right: unset;
+		}
+	}
+}
+
+.search-bar{
+	grid-column: 3/4;
+	place-self: center right;
+	display: flex;
+	height: 1.75rem;
+	width: 1.75rem;
+
+	@include mixins.landscape{
+		width: 70%;
+		max-width: 15rem;
+		border: 1px solid rgba(0,0,0,0.5);
+		border-radius: 999rem;
+		background: white;
+	}
+
+	@include mixins.wide-screen{
+		grid-column: 4/5;
+		grid-row: 1/2;
+	}
+
+	&__input{
+		display: none;
+
+		@include mixins.landscape{
+			display: flex;
+			outline: none;
+			border: none;
+			width: 100%;
+			height: 100%;
+			background: none;
+			padding: 0.3rem;
+		}
+	}
+
+	&__button{
+		border: none;
+		position: relative;
+		cursor: pointer;
+		height: 100%;
+		width: 100%;
+		background: whitesmoke;
+
+		@include mixins.landscape{
+			background: white;
+			border-radius: 999rem;
+			margin: auto 0.1rem auto 0.5rem;
+			height: 80%;
+			width: unset;
+		}
+	}
+
+	&__button-icon{
+		@include mixins.landscape{
+			filter: invert(52%) sepia(9%) saturate(19%) hue-rotate(10deg) brightness(95%) contrast(86%);
+		}
+	}
+}

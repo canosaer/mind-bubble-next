@@ -1,0 +1,5 @@
+@use '../../styles/globals';
+
+.workshops{
+	@include mixins.default-grid;
+}

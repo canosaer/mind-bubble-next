@@ -1,0 +1,62 @@
+@use '../../../styles/globals';
+
+.footer{
+	@include mixins.default-grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-top: 3.5rem;
+	border-top: 1px solid lightgray;
+	margin-bottom: 4rem;
+	padding: 2rem 1.5rem;
+	font-size: 0.875rem;
+
+	@include mixins.landscape{
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include mixins.wide-screen{
+		padding: 2rem 4%;
+	}
+
+	&__faq{
+		display: none;
+		color: rgb(77, 109, 209);
+		place-self: center left;
+
+		@include mixins.landscape{
+			display: flex;
+		}
+		
+	}
+
+	&__copyright{
+		color: #909097;
+		place-self: center center;
+		text-align: center;
+		margin: 0 0.7rem;
+	}
+
+    &__social-display{
+        display: flex;
+        align-items: center;
+        place-self: center right;
+        justify-content: space-between;
+
+		@include mixins.landscape{
+			grid-column: 3/4;
+		}
+	
+    }
+
+    &__social-icon{
+        background: none;
+        border: none;
+        color: rgb(77, 109, 209);
+        font-size: 1.3rem;
+        cursor: pointer;
+		margin-right: 0.75rem;
+
+		&_in{
+            margin-right: unset;
+        }
+    }
+}
