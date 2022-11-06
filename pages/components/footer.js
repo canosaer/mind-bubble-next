@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faFaceRelieved } from '@fortawesome/pro-solid-svg-icons'
+
 export default function Footer() {
 
     return(
@@ -15,6 +18,7 @@ export default function Footer() {
                     {/* <button className="footer__social-icon"><FontAwesomeIcon icon={["fab", "twitter"]} /></button> */}
                 </a>
                 <a href="#" className="footer__social-button">
+                    {/* <FontAwesomeIcon icon={faFaceRelieved} /> */}
                     {/* <button className="footer__social-icon footer__social-icon_in"><FontAwesomeIcon icon={["fab", "linkedin-in"]} /></button> */}
                 </a>
                 

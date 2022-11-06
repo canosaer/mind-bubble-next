@@ -5,16 +5,17 @@
 .bm-burger-button {
     height: 1.5rem;
 	width: 1.75rem;
-	z-index: 4;
 	position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1001 !important;
   }
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
     height: 3px !important;
     background-color: black;
+    transition: transform 0.25s ease-in-out, top 0.25s ease-in-out;
   }
   
   /* Color/shape of burger icon bars on hover*/
@@ -26,6 +27,7 @@
   .bm-cross-button {
     height: 24px;
     width: 24px;
+    display: none;
   }
   
   /* Color/shape of close button cross */
@@ -42,6 +44,7 @@
     top: 0;
     left: 0;
     height: 100%;
+    z-index: 1000 !important;
   }
   
   /* General sidebar styles */
