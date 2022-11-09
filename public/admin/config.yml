@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow
-media_folder: "img/uploads"
+media_folder: public/img
+public_folder: img
 collections:
   - name: "featured-programs" # Used in routes, e.g., /admin/collections/blog
     label: "Featured Programs" # Used in the UI
