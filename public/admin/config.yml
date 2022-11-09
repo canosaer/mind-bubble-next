@@ -14,7 +14,7 @@ collections:
       - {label: "Caption", name: "caption", widget: "text"}
       - {label: "Spotlight Image", name: "spotlight-image", widget: "image"}
       - {label: "Spotlight Link", name: "spotlight-link", widget: "string"}
-      - {label: "Spotlight Heading", name: "spotlight-text", widget: "string"}
+      - {label: "Spotlight Heading", name: "spotlight-heading", widget: "string"}
       - {label: "Spotlight Text", name: "spotlight-text", widget: "text"}
       - {label: "Detail Image 1", name: "detail-image-1", widget: "image"}
       - {label: "Detail Link 1", name: "detail-link-1", widget: "string"}
