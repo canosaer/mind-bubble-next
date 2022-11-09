@@ -22,7 +22,9 @@ TABLE OF CONTENTS:
 @use 'width-fixer';
 @use 'wide-screen-container';
 @use 'upcoming-events';
+@use 'hero';
 @use 'header';
+@use 'programs';
 
 /* 2. Fonts ================================== */
 
@@ -34,26 +36,49 @@ TABLE OF CONTENTS:
 	box-sizing: border-box;
 }
 
+body{
+	background: whitesmoke;
+	font-family:'Lucida Sans', sans-serif;
+}
+
 a{
 	text-decoration: none;
 }
 
-body{
-	background: whitesmoke;
-    font-family: "Lucida Sans", sans-serif;
+b, strong{
+	font-weight: bold;
 }
 
-#root{
+em{
+	font-style: italic;
+}
+
+.page-container, #root {
 	@include mixins.default-grid;
 }
 
-main{
-	@include mixins.default-grid;
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
 	position: relative;
-	width: 100%;
-	max-width: 414px;
-	place-self: center center;
-	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+textarea {
+	overflow: auto;
 }
 
 /* 4. Utility ================================ */

@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+media_folder: "img/uploads"
+collections:
+  - name: "featured-programs" # Used in routes, e.g., /admin/collections/blog
+    label: "Featured Programs" # Used in the UI
+    folder: "_posts/featured-programs" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Program Name", name: "program-name", widget: "string"}
+      - {label: "Main Heading", name: "main-heading", widget: "string"}
+      - {label: "Caption", name: "caption", widget: "text"}
+      - {label: "Spotlight Image", name: "spotlight-image", widget: "image"}
+      - {label: "Spotlight Link", name: "spotlight-link", widget: "string"}
+      - {label: "Spotlight Heading", name: "spotlight-text", widget: "string"}
+      - {label: "Spotlight Text", name: "spotlight-text", widget: "text"}
+      - {label: "Detail Image 1", name: "detail-image-1", widget: "image"}
+      - {label: "Detail Link 1", name: "detail-link-1", widget: "string"}
+      - {label: "Detail Heading 1", name: "detail-heading-1", widget: "string"}
+      - {label: "Detail Image 2", name: "detail-image-2", widget: "image"}
+      - {label: "Detail Link 2", name: "detail-link-2", widget: "string"}
+      - {label: "Detail Heading 2", name: "detail-heading-2", widget: "string"}

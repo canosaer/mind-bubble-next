@@ -1,11 +1,12 @@
 import hero from '../../img/hero.jpg'
+import Image from 'next/image'
 
 export default function Hero() {
 
 
     return(
         <section className="hero">
-            <img className="hero__image" src={hero} alt="hero image" />
+            <Image className="hero__image" src={hero} alt="hero image" layout="fill" priority />
             <h1 className="hero__heading">Mind Bubble</h1>
             <h2 className="hero__subheading">Tutoring, Workshops, and Games</h2>
 

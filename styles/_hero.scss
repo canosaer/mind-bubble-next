@@ -1,4 +1,5 @@
-@use '../../../styles/globals';
+@use 'variables';
+@use 'mixins';
 
 .hero{
 	@include mixins.default-grid;

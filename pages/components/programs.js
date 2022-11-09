@@ -35,9 +35,7 @@ export default function Programs() {
                                                 <h4 className="program__card-heading">{card.heading}</h4>
                                                 <p className="program__card-text">{card.text}</p>
                                             </div>
-                                            
                                             :
-
                                             <h4 className="program__card-heading">{card.heading}</h4>
                                         }
                                     </a>
@@ -48,8 +46,8 @@ export default function Programs() {
                         </div>
                     </div>
                 )              
-            })}
- */}
+            })} */}
+
 
             
         </section>
