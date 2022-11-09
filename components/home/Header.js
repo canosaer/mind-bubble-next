@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { slide as Menu } from 'react-burger-menu'
-import {useWindowSize} from '../utilities/utilities'
+import {useWindowSize} from '../../lib/utilities'
 
 // Images
 import search from '../../img/magnifying-glass.svg'

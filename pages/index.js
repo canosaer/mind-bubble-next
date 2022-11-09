@@ -5,11 +5,11 @@ import Image from 'next/image'
 import Script from 'next/script'
 
 //Page Components
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Programs from './components/Programs'
-import Events from './components/Events'
-import Footer from './components/Footer'
+import Header from '../components/home/Header'
+import Hero from '../components/home/Hero'
+import Programs from '../components/home/Programs'
+import Events from '../components/home/Events'
+import Footer from '../components/home/Footer'
 
 export default function Home() {
   return (
