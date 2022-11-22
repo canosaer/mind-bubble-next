@@ -17,7 +17,7 @@ export default function Home() {
       <main className="home">
         <Hero />
         <Programs />
-        {/* <Events /> */}
+        <Events />
       </main>
       {/* <Footer /> */}
     </>

@@ -1,4 +1,26 @@
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
+import {auth, strapiBaseUrl} from '../../strapi/api'
+
 export default function Events() {
+
+    const  [ events, setEvents ] = useState([])
+
+    const getEvents = async () => {
+        try{
+            const response = await axios.get(`${strapiBaseUrl}/api/events/preview`, auth)
+            setEvents(response || ['no data'])
+            console.log(response)
+        } catch(err) {
+            console.log(err.message, err.code)
+        }
+    }
+
+    useEffect(() => {
+        if(events.length < 1){
+            getEvents()
+        }
+    }, [events])
 
     return(
         <section className="upcoming">
